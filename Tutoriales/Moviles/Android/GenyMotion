@@ -1,0 +1,23 @@
+1) Installar virtualbox
+2) Registrarte y Descargar https://www.genymotion.com/#!/download
+3) En la consola te ubicas en la carpeta de descargas(o donde esta ubicado el genymotion que descargaste)
+4) sudo chmod +x genymotion-2.6.0-linux_x64.bin
+5) ./genymotion-2.6.0-linux_x64.bin
+6) En descargas se creara una carpeta llamada genymotion, copiala y ubicala donde quieres que este
+7) Entra a la carpeta genymotion y busca ahi un archivo genymotion(dale doble click a ese archivo)
+8)	se abrira un cuadro de dialogo dale acept
+9)	Te preguntarta si quieres crear un dispositivo virtual dale que su
+10)	Dale a sig in y escribe tu cuenta. luego te aparecera una lista de dispositivos virtuales
+11) Elige tu dispositivo y dale next
+12) Para configurar android studio con genymotion sigue los siguientes pasos:
+	*)	File->settings->Plugins : Aqui busca Genymotion -> luego instala y te aparece una opcion de reiniciar dale click
+	*) te aparece un nuevo icono en el menu superior android studio. Ese icono es de genymotion, dale click y la primera ves te saldra para que ubiques a la carpeta donde tienes genymotion, seleccionas a dicha carpeta y le das a ok
+	*) Vuvlve a darle al icono de genymotion ahora ya te sale para que eligas el emulador
+	Un posible error que te puede dar es el siguiente
+	!ERROR:
+	-------
+	Error:Execution failed for task ':app:validateDebugSigning'.
+> Unable to create debug keystore in "/home/daniel/.android" because it is not writable.
+	SOlucion
+	--------
+	Dale permisos

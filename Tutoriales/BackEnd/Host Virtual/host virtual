@@ -1,0 +1,20 @@
+cd /etc/apache2/sites-enabled/
+sudo kate asep.local.conf
+ en ese archivo pegar esto y cambiar esas rutas por la rutadonde esta tu proyecto
+ <VirtualHost *:80>
+	  ServerName asep.local
+	  ServerAdmin webmaster@localhost
+	  DocumentRoot /home/zktitos/Escritorio/zkte-framework/proyectos/clicksandbricks/asep/asep
+      php_value include_path "/home/zktitos/Escritorio/zkte-framework/proyectos/clicksandbricks/asep/asep"
+	  <Directory /home/zktitos/Escritorio/zkte-framework/proyectos/clicksandbricks/asep/asep>
+	  AllowOverride All
+	  Require all granted
+      </Directory>
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
+
+ sudo su -c "echo '127.0.0.1 asep.local' >> /etc/hosts"
+sudo service apache2 restart
+dar permisos a los archivos q estan dentro :
+	sudo chmod 777 archivo

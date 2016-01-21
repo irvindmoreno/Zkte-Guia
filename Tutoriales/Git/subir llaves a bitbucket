@@ -1,0 +1,13 @@
+ssh-keygen
+	//presionas enter ,escribes y repites la contraseña
+cd ~/
+ls -la
+	// veras un archivo .ssh
+cd .ssh
+ls
+	// veras 2 archivos id_rsa  id_rsa.pub
+cat id_rsa.pub
+	// copiar todos esos caracteres e ir a bitbucket
+	   click en la flecha de tu foto -> manage account
+	   en la parte izquierda click en ssh keys
+	   clivk add key y en key pegas los caracteres q copiaste

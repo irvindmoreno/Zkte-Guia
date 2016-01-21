@@ -1,0 +1,33 @@
+PASO 1: INSTALAR JDK7
+---------------------
+    sudo -s
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt-get update
+    sudo apt-get install oracle-java7-installer
+    // Aqui te saldra primero una ventana, le das "ok", y a la siguiente ventana le das "si"
+    java -version
+    // Con este comando probaremos si se instalo bien
+
+PASO 2: DESCARGAR ANDROID STUDIO:
+--------------------------------
+    Entrar al siguiente link y descargar android estudio
+    http://developer.android.com/sdk/index.html#top
+    Entra a la carpta en donde descargaste android studio y descomprimela
+
+PASO 3: INSTALAR ANDROID STUDIO:
+-------------------------------
+    Comandos:
+        cd Descargas
+        cd android-studio/
+        cd bin/
+        ./studio.sh
+        // aqui le das ok
+        // y ya lo demas es como windows:(siguiente siguiente)
+PASO 4: CAMBIAR DE UBICACIÓN EL ANDROID STUDIO DESCARGADO
+---------------------------------------------------------
+    El paso 3 instalo android studio, pero lo isntalo en el mismo lugar en donte tenias el instalador
+    por defecto en Descargas, asi que cambiaremos de ubicación a la carpeta recientemente instalada llamada "android"
+    al lugar que queremos
+
+        

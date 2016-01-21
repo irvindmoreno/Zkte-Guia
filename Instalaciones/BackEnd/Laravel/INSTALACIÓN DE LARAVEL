@@ -1,0 +1,35 @@
+INSTALACIÓN DE LARAVEL
+----------------------
+	-	Hay 2 formas de instalar laravel
+	1) Primera forma:(localmente)
+		Comando:
+			composer create-project laravel/laravel --prefer-dist
+
+			Para comprobar si se instalo laravel entre al proyecto creado, si no le puso nombre por defecto es "laravel".
+			una ves ubicado en la consola dentro del proyecto escriba el siguiente comando:
+			php artisan
+
+			Para levantar el servidor local ingrese el siguiente comando:
+			php artisan serve
+
+
+
+	2) Segunda Forma:(GLobalmente para usar los comandos de laravel.. Recomendado)
+		Comando:
+			1)	composer global require "laravel/installer=~1.1"
+			2)	sudo kate /etc/environment
+				Pasos a seguir:
+				Se abrira un archivo con una variable PATH, aqui tenemos que agregar al final lo siguiente
+				*)	:/home/usuario/.composer/vendor/bin
+				Donde "usuario" viene a ser el usuario de tu computadora por ejm: "zktitos"
+			3)	source /etc/enviroment
+				Eplicación:
+				Esto hace que el sistema detecte nuevamente el cambio de variables de entorno
+			4)	laravel new proyectoNuevo
+				Explicación:
+				Esto creara un proyeto nuevo de laravel
+
+
+!PARA MAS INFORMACIÓN
+http://serprogramador.es/instalando-laravel-en-debian-ubuntu-y-derivados/
+ 

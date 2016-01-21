@@ -1,0 +1,15 @@
+Si querés saber si tu hardware soporta 64 bit
+---------------------------------------------
+	Abre un terminal y ejecutá:
+
+	grep flags /proc/cpuinfo
+
+	Si en el resultado aparece lm, entonces soporta 64 bit; si aparece Protected Mode, soporta 32 bit; si aparece Real Mode, soporta 16 bit.
+
+
+Si querés saber si tu kernel actual soporta 64 bit
+-------------------------------------------------- 
+	Abre un terminal y ejecutá:
+
+	uname -a
+	Si en el resultado aparece “x86_64 GNU/Linux” eso indica que estás corriendo un kernel Linux de 64 bit. En cambio, si ves “i386/i486/i586/i686”, es un kernel de 32 bit.

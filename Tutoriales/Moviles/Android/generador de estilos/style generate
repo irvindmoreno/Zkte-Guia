@@ -1,0 +1,13 @@
+DEFINICION:
+----------
+Es un generador de estylos del action bar de android
+
+INSTALACION:
+------------
+1)	Entrar al siguiente link
+	https://jgilfelt.github.io/android-actionbarstylegenerator/
+2)	Configurar como quieres que sean tus estilos y descargar el zip
+3)	Al descomprimir el zip te dejara una carpeta res
+4)	Remplaz esta carpeta res y pegarla en la ruta donde esta la carperta res de tu proyecto
+5)	Ve a manifest/AndroidManifest.xml y busca la linea andorid:theme="@style/
+6)	en res/values copiar el código de de style_nombreDeTuEstiloGenerado y pegarlo en los archivos dentro de la carpeta style

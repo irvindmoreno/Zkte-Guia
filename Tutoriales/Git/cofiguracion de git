@@ -1,0 +1,5 @@
+git --version
+git config --global user.name "TU NOMBRE"
+git config --global user.email "TU CORREO DE GITHUB"
+git config --global color.ui true
+git config --global --list

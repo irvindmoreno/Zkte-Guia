@@ -1,0 +1,10 @@
+#Entra al siguiente link
+	https://packagecontrol.io/installation#st2
+	// copiar el codigo de esa página de acuerdo a tu version de sublime
+#En sublime: view->show console
+	// pegar el código q copiaste de la pag
+#Cierra y vuelve a abrir el sublime
+#Presiona la tecla ctr + shift + p y escribe Package Control: Install Package
+#aparecera un cuadro ahi escrbe jade,stylus o lo que quieras instalar
+#si da error ubicarte en /home/*usuario*/.config
+ y da permiso consudo chmod 777 -R sublime-text-3

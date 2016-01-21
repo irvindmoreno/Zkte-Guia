@@ -1,0 +1,53 @@
+PREREQUISITOS:
+--------------
+Tener instalado virual box y vagrant
+
+PASO1 : Bajar la imagen de ubuntu con vagrant
+---------------------------------------------
+	Comandos:
+		-	vagrant box add laravel/homestead
+	Explicación:
+		Este comando lo que hara es bajarte una imagen de ubuntu(cd virtual en tu pc), y te pedira que eligas una de las opciones (virtualbox o vmware_desktop). Selecciona el virtualizador que tengas instalado
+
+PASO 2: Clonar el repositrio de Homestead
+-----------------------------------------
+	Clonar el repositorio dentro de la carpeta home
+	Comandos:
+		-	git clone https://github.com/laravel/homestead.git Homestead
+	Explicación:
+		Se clona el proyecto ya que ahi hay un .sh el cual debemos ejecutar para instalar Homestead
+
+PASO 3: Ejecutar el .sh de Homestead
+------------------------------------
+	Pasos a seguir:
+		- Ubicarte por consola en la carpeta en donde clonaste Homestead
+		- Verificar con un "ls" si existe un archivo "init.sh"
+		- Si existe el init.sh ejecutar el siguiente comando:
+			bash init.sh
+		  (caso contrario ubicarte donde este ese archivo y ejecutar ese comando.)
+
+PASO 4:Creación de llaves
+-------------------------
+	Es necesario tener las llaves rsa de ssh-keygen. Si no las tiene mire el tutorial de: "Subir llabes a bitbucket" de la carpeta Tutoriales/git (pero como ya tienes las llaves de github entonces ya tienes asignadas las llaves :D ... don't worry!! )
+
+PASO 5: Configuración de Homestead.yaml
+---------------------------------------
+	Pasos a Seguir:
+		- Después del paso 3, se a generado en el directorio raiz una carpeta ".homestead", asi que nos ubicaremos en dicha carpeta y abrinos el archivo Homestead.yaml
+		*)	cd ~/
+		*)	cd .homestead/
+		*)	sudo kate Homestead.yaml 
+
+
+PASO 6: Definir los dominios:
+----------------------------
+	sudo kate /etc/hosts
+	Aqui agrear tu dominio.Ejem:
+	192.168.10.10 laravel.app
+
+PASO 7:Levantar Vagrant:
+-----------------------	
+	Pasos a seguir:
+		Ubicate en la carpeta donde clonaste tu Homestead a traves de la consola y ejecuta el siguiente comando 
+	Comandos:
+		sudo vagrant up

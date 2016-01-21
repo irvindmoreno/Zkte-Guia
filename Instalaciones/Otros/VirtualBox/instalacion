@@ -1,0 +1,33 @@
+OPCION 1:(Recomendado)
+--------
+    echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+    sudo apt-get update
+     sudo apt-get install virtualbox-5.0
+
+
+
+OPCION 2:(no recomendado)
+--------
+
+PASO 1: DESCARGAR VIRTUALBOX DE LA PÁGINA OFICIAL
+------------------------------------------------
+    Entrar al siguiente link:
+    https://www.virtualbox.org/wiki/Linux_Downloads
+    Descargar el paquete necesario segun tu sistema operativo
+
+PASO 2: INSTALAR GDEBI
+----------------------
+    Abrir el centro de software y buscar "gdebi"
+    Apareceran 2, Selecionas el que tiene forma de caja, es decir, el que dice solo (gdebi) y no el que dice (gdebi-kde) y le das install
+
+PASO 3: INSTALAR VIRTUALBOX CON GDEBI
+-------------------------------------
+    Ir a la carpeta en donde descargaste el virtual box(sin la terminal) y darle click derecho y luego:
+    abrir con -> instalar con gdebi
+    Te aparecera una ventana a cual le das a install package
+
+
+
+EXRA: VER EL CIRTUALBO QUE TENGO INSTALADO
+------------------------------------------
+    dpkg --get-selections | grep virtualbox. 

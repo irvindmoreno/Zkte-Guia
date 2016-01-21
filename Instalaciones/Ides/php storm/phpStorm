@@ -1,0 +1,39 @@
+Entrar a este link:
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+y descargar el jdk de acuerdo a tu compu y luegp acepta la licencia
+
+
+Si tenemos instalado OpenJDK vamos a desinstalarlo:
+sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\*
+
+caso contrario:
+cd ~/Descargas
+tar xvzf jdk-8u60-linux-x64.tar.gz
+sudo mkdir /usr/local/java
+sudo mv jdk1.8.0_65 /usr/local/java
+
+
+sudo update-alternatives --install /usr/bin/java java /usr/local/java/jdk1.8.0_65/jre/bin/java 1 \
+&& sudo update-alternatives --install /usr/bin/javac javac /usr/local/java/jdk1.8.0_65/bin/javac 1 \
+&& sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jdk1.8.0_65/bin/javaws" 1 \
+&& sudo update-alternatives --set java /usr/local/java/jdk1.8.0_65/bin/java \
+&& sudo update-alternatives --set javac /usr/local/java/jdk1.8.0_65/bin/javac \
+&& sudo update-alternatives --set javaws /usr/local/java/jdk1.8.0_65/bin/javaws \
+&& source /etc/profile
+
+
+para corroborar que este instalado:
+java -version
+javac -version
+javaws
+
+
+ir a este link y descargar phpstorm
+https://www.jetbrains.com/phpstorm/download/#tabs_1=linux-version
+
+cd ~/Descargas
+tar xvzf PhpStorm-9.0.2.tar.gz
+sudo mv PhpStorm-143.1184.87/ /usr/local/
+
+/usr/local/PhpStorm-143.1184.87//bin/phpstorm.sh
+y luego ya es como windows

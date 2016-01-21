@@ -1,0 +1,31 @@
+Definición: Sirve para agrupar archivos en un solo paquete por decirlo asi.
+Importante:LOs namespace siempre van inmediatamente despues de <?php
+
+ejm:
+archivo1.php contiene esto
+    <?php
+    namespace platziPHP;
+
+    class Usuarios
+    {
+        private $nombre;
+    }
+
+    ?>
+
+archivo2.php contiene esto
+    <?php
+    namespace platziPHP;
+
+
+    class Animales
+    {
+        private $nombre;
+    }
+
+    ?>
+
+archivo3.php
+//requerir los archivos si no usas autoload
+$obj =new /platziPHP/Usuaruis()
+

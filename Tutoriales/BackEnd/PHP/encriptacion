@@ -1,0 +1,2 @@
+$password="123456"
+password_hash($password,PASSWORD_DEFAULT)

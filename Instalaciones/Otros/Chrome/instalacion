@@ -1,0 +1,23 @@
+PASO 1: DESCARGAR GOOGLE CHROME
+-------------------------------
+    Descarga de este link el chrome de acuerdo a tu computadora
+    https://www.google.es/chrome/browser/thankyou.html?platform=linux
+
+PASO 2: ACTUALIZAR TUS PAQUETES DE LINUX
+----------------------------------------
+    Comandos:
+        sudo apt-get update
+        sudo apt-get upgrade
+
+PASO 3: INSTALAR GOOGLE CHROME
+------------------------------
+    Comandos:
+        -   cd ~/Descargas
+        -   sudo dpkg -i nombreDelArchivoDescargado
+        -   sudo apt-get upgrade -f
+    Explicación:
+        Ubicarte en donde esta ubicado el archivo que descargaste en el paso 1, en mi caso: "cd Descargas"
+        instalamos el paquete con sudo dpkg -i
+        Esto quizá nos bote un error, pero lo solucionamos con el siguiente comando
+        sudo apt-get upgrade -f
+

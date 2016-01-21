@@ -1,0 +1,2 @@
+#eliminar la última linea 
+	sed -i '$d' inicio.js

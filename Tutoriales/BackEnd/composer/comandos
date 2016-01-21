@@ -1,0 +1,13 @@
+//Para iniciar composer, esto se hace solo la rimera ves y para ello ubicate en el proyecto en el que lo deses
+// esto te genear un archivo llamado composer.json
+// el name tiene este formato: vendor/nombreDelProyecto
+    composer init
+
+//Para traer un paquete y que no suba a produccion sino que se quede en dev
+    composer require nombre del paquete --dev
+
+// para instalar todo lo que hay dentro del composer.json
+    composer install
+
+// para actualizar mis paquetes que ya tengo instalado
+    composer update nombreDelPaquete

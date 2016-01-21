@@ -1,0 +1,4 @@
+en el php.ini q en mi caso q uso linux esta en esta ruta
+sudo kate /etc/php5/apache2/php.ini
+buscar la linea upload_max_filesize y aumentarle la cantidad
+#reiniciar apache: sudo service apache2 restart

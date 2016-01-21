@@ -1,0 +1,6 @@
+DEFINICION:
+-----------
+    Leavantar un pequeño servidor sin necesidad de host virtual
+COMANDOS:
+---------
+php -S localhost:8000 NombreDelArchivoAlevantar.php

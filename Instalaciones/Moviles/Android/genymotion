@@ -1,0 +1,30 @@
+PASO 1: INSTALAR VIRTUALBOX
+---------------------------
+    Como instalar irtualbox esta en instalaciones/otros/virtualbox
+
+PASO 2: DESCARGAR GENYMOTION
+----------------------------
+    Entrar a este link y entrar con una cuenta, si no la tienes create, pero dejare mis datos de mi cuenta para quwe no te crees una
+    https://www.genymotion.com
+    user: sagir90@hotmail.com
+    pw: katarane
+    Ahora ve a esta url
+    https://www.genymotion.com/#!/download
+    y descarga el que necesites
+
+PASO 3: INSTALAR GENYMOTION:
+---------------------------
+    cd Descargas
+    chmod +x nombreDelArchivoDescargado
+    ./nombreDelArchivoDescagado.bin
+
+PASO 4: CONFIGURAR GENYMOTION CON ANDROID STUDIO
+------------------------------------------------
+    Abrir tu android studi e ir a:
+    Settings->plugins->brows repositorys
+    y aqui escribir genymotion y le damos a install plugin y finalmente a restar android studio para que android studio se reinicie
+    Al reiniciarse androdrid studio veras que te aparecera un nuevo icono de un celular rosado en el menu
+    le das click, y por primera y única ves te pedira la ruta de genymotion que por defecto es esta:
+    /opt/genymobile/genymotion
+    caso contrario busca donde esta tu genymotion
+

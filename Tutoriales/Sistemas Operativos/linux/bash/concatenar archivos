@@ -1,0 +1,4 @@
+#concatena 3 archivos y lo pega en un tercero
+	cat file1.txt file2.txt>file3.txt
+# concatena
+	cat < 1.txt  >> 2.txt

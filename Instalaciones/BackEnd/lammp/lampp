@@ -1,0 +1,41 @@
+Paso 1. Instalar Apache
+------------------------
+	sudo apt-get update
+	sudo apt-get install apache2
+	* Verifica en tu navegador http://localhost
+Paso 2. Instalar MySQL
+----------------------
+	sudo apt-get install mysql-server php5-mysql
+	sudo mysql_install_db
+	sudo mysql_secure_installation // contraseña ,n para la segunda pregunta y enter par a las demas
+	* Puedes comprobar la instalación escribiendo en la consola
+		mysql -u root -p
+		si aparece mysql&gt; ya puedes escribir comandos mysql
+		exit; // para salir de mysql
+Paso 3. Instalar PHP
+--------------------
+	sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
+Paso 4. Dar preferencia al archivo index.php
+--------------------------------------------
+	sudo gedit /etc/apache2/mods-enabled/dir.conf // kate en ves de gedit si no reconoce gedit es un editor de texto
+	Debemos remplazar la siguiente linea:
+		DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+	por:
+		DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+	sudo service apache2 restart
+	*crear un archivo con
+		sudo nano /var/www/html/info.php
+		dentro pegar:
+		<?php
+			phpinfo();
+		?>
+	 //guarda ctr+o, enter, ctr x
+
+	en el navegador abrir:
+		http://localhost/info.php
+Paso 5. Instalar phpmyadmin
+---------------------------
+	sudo apt-get install phpmyadmin -y
+	//enter,enter. 3 contraseñas
+	sudo ln -s /usr/share/phpmyadmin/ /var/www/html/
+	// probar http://localhost.phpmyadmin

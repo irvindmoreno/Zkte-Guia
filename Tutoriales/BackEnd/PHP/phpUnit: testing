@@ -1,0 +1,45 @@
+DEFINICION:
+---------
+las pruebas que se van a ejecutar en desarrollo no las necesitamos en produccion.
+
+IMPLEMENTACIÓN:
+---------------
+1) para instlar el paquete phpunit entra a la consola y tipea:
+    composer require phpunit/phpunit --dev
+2) Crear una nuevo archivo que tendra la clase que hara el testing, y esta debe
+    de exxtender de:PHPUnit_Framework_TestCase
+    ejmplo:
+    class UsuariosTest extends PHPUnit_Framework_TestCase
+    {
+
+    }
+3) para hacer un testing hay que agregar el siguiente comentario antes de la funcion /** @test */
+    ejm:
+
+    /** @test */
+    function probarConstructor()
+    {
+
+    }
+4) para verificar que un objeto se haya haya creado correctamente se instancia un objeto el cual quieres probar
+    y haciendo uso del metodo "assertInstanceOf" lo verifica
+    ejemplo:
+    $usuario= new \platziPHP\Usuarios('yes@hotmail.com',1234);
+    $this->assertInstanceOf(\platziPHP\Usuarios::class, $usuario);
+5)  Para correr tus testting escribe en la terminal:
+    ./vendor/bin/phpunit nombreDeLaCarpeta --color=auto
+6)  Para ver un ejmplo completo ve a Proyectos/Estudios/php/proyecto-platzi/tests
+
+ejemplo final:
+<?php
+class UsuariosTest extends PHPUnit_Framework_TestCase
+{
+    /** @test */
+    function probarConstructor()
+    {
+        $usuario= new \platziPHP\Usuarios('yes@hotmail.com',1234);
+        $this->assertInstanceOf(\platziPHP\Usuarios::class, $usuario);
+
+    }
+
+}
