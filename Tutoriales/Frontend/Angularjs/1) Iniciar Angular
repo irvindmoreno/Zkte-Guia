@@ -1,0 +1,6 @@
+AGREGAR LA DIRECTIVA PRINCIPAL DE ANGULAR
+-----------------------------------------
+	Directiva:
+		<html ng-app>
+	Explicación:
+		ng-app , se le coloca a la etiqueta html o al body, para indicar que este proyecto es un proyecto angular

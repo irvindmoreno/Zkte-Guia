@@ -1,0 +1,21 @@
+CLASES DE CSS:
+-------------
+	1) full-image => se les agrega a las imagenes para que sean responsive
+
+	BOTONES:
+	--------
+		1) button => le da estilos a una etiqueta de tipo boton movil
+		2) button-calm => le da color celeste bonito a un boton
+		3) button-energized => le da color amarillo a un boton
+		3) button-dark => le da color oscuro a un boton
+		4) button-small => tamaño pequeño para boton
+		5) button-large => tamaño grande para el boton
+		5) button-block => ocupa todo el ancho de su contenedor
+		6) button-clear => Dentro de un ion-header lo pone mismo settings de android
+		BOTONERA:(Lista de botones)
+		---------------------------
+		<div class="button-bar">
+			<button class="button">btn1</button>
+			<button class="button">btn1</button>
+			<button class="button">btn1</button>
+		</div>

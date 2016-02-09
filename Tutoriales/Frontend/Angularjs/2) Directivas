@@ -1,0 +1,20 @@
+NG-CONTROLLER:
+-------------
+		DIRECTIVA:
+				<div ng-controller="controlador1"></div>
+		EXPLICACIÓN:
+				Todo lo que este dentro de este div estara bajo el control de "controlador1" 
+
+NG-SHOW:
+--------
+		DIRECTIVA:
+				<div ng-show="true"></div>
+		EXPLICACIÓN:
+
+
+NG-CLICK
+-------
+		DIRECTIVA
+				<div ng-click="controladorButton()"></div>
+		EXPLICACIÓN:
+				Es el evento click y llamara al metodo controladorButton del controlador al cual pertenesca
