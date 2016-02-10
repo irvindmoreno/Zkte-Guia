@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div ng-controller="controlador1">
+		
+		
+		<label> Lo Multiplicamos por 5:</label>
+		<input type="text" ng-model="cantidad"/>
+		<button ng-click="multiplarPorCinco()">Multiplicame por 5</button>
+		<br>
+		Precio Total: {{ resultado }}
+		
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+		miAplicacion.controller('controlador1',['$scope',function($scope){  // controlador1 del ng-controller
+			$scope.cantidad=4;
+			$scope.multiplarPorCinco=function()
+			{
+				$scope.resultado = $scope.cantidad *5;
+			}
+			
+		}])
+	</script>
+</body>
+</html>

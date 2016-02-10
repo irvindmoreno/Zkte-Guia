@@ -18,3 +18,17 @@ NG-CLICK
 				<div ng-click="controladorButton()"></div>
 		EXPLICACIÓN:
 				Es el evento click y llamara al metodo controladorButton del controlador al cual pertenesca
+
+NG-MODEL
+--------
+		DIRECTIVA
+				<div ng-model="nombreModel"></div>
+NG-CLASS
+--------
+		DIRECTIVA
+				<div ng-class="variableQueSeCambiaEnElControlador"></div>
+
+NG-SRC
+------
+		DIRECTIVA
+				<img ng-src="variableQueSeCambiaEnElControlador">

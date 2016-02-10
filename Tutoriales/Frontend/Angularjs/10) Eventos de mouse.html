@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div ng-controller="controlador1">
+		
+		<div>Eventos</div>
+		<div ng-click="eventoClick()">Click</div>
+		<div ng-dblclick="eventoDobleClick()"> doble Click</div>
+		<div ng-mouseleave="mouseFuera()" ng-mouseenter="">Entra y sale de la imagen</div>
+		
+		
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+		miAplicacion.controller('controlador1',['$scope',function($scope){  // controlador1 del ng-controller			
+			$scope.trabajadoresObjeto=[
+					{ nombre:"Daniel", apellido:"Moreno"},
+					{ nombre:"Samuel", apellido:"Marquéz"},
+					{ nombre:"Cesar", apellido:"Velázques"},
+					{ nombre:"Martín", apellido:"Cruz"},
+					{ nombre:"Jhon", apellido:"Campos"}
+			];
+			
+		}])
+	</script>
+</body>
+</html>

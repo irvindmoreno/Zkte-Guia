@@ -1,0 +1,74 @@
+<!-- 
+Aplicación que me mostrara como usar rutas
+
+PASO 1: Agregar el ['ngRoute']
+-----------------------------
+    Código:
+        var miAplicacion = angular.module('tiendaDeFruta',['ngRoute']);
+    Explicación:
+        Me permitira usar las funcionalidades de las rutas
+PASO 2: DIRECTIVA ng-view
+-------------------------
+    Código:
+        <div ng-view></div>
+    Explicación:
+        Aqui sera el div donde se muestre el contenido de las otras vistas (como ajax, solo que indexables con google)
+PASO 3: SRIPT
+-------------
+    Código:
+        miAplicacion.config(['$routeProvider',
+                            function($routeProvider)
+                            {
+                                $routeProvider
+                                    .when('/url/ejem1',{
+                                        templateUrl:'extras/ejem1.html'
+                                    })
+                                    .when('/url/ejem2',{
+                                        templateUrl:'extras/ejem2.html'
+                                    })
+                                    .otherwhise({
+                                        redirectTo:'/',
+                                        templateUrl:'extras/inicio.html'
+                                    });
+                            }]);
+        
+-->
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div ng-include src="'extras/include.html'"></div>
+	<div>Rutas en angula </div>
+    <a href="#/url/ejem1">ejem 1</a>
+    <a href="#/url/ejem2">ejem 2</a>
+    <a href="#/">inicio</a>
+    
+    <div ng-view></div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+	
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',['ngRoute']);
+		miAplicacion.config(['$routeProvider',
+                            function($routeProvider)
+                            {
+                                $routeProvider.
+                                    when('/url/ejem1',{
+                                        templateUrl:'extras/ejem1.html'
+                                    }).
+                                    when('/url/ejem2',{
+                                        templateUrl:'extras/ejem2.html'
+                                    }).
+                                    otherwhise({
+                                        redirectTo:'/',
+                                        templateUrl:'extras/inicio.html'
+                                    });
+                            }]);
+	</script>
+</body>
+</html>

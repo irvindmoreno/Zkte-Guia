@@ -1,0 +1,7 @@
+EJEMPLO:
+--------
+	<input type="text" ng-model="miModelo">
+	<h1>{{ miModelo }}</h1>
+
+EXPLICACION:
+	Los datos que haya en el modelo "miModelo" se escribiran en {{ miModelo}}
