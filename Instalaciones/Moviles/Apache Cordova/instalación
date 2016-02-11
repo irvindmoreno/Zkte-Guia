@@ -1,0 +1,15 @@
+PASO 1: INSTALACIÓN DE LOS SDK
+------------------------------
+	- Instalar los sdk de acuerdo a la plataforma en la que quieras trabajar
+
+PASO 2:
+------
+	Ubicarte en la carpeta Android/Sdk/tools con la consola
+	export PATH=${PATH}:home/daniel/Android/Sdk/tools
+
+PASO 3: EDITAR EL ARCHIVO .PROFILE
+----------------------------------
+	cd $HOME
+	sudo kate .profile
+	// En este archivo copiar al final la siguiente linea
+	export PATH=${PATH}:home/daniel/Android/Sdk/tools

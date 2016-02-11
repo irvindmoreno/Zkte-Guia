@@ -1,0 +1,16 @@
+PASO 1: CONECTARSE A MONGO
+--------------------------
+	COMANDO:	
+		mongod
+
+	EXPLICACIÓN:
+		En la terminal ejecutar y dejar corriendo ete comando, que es el que te permitira conectarte a mongo
+
+PASO 2: ABRIR MONGO
+-------------------
+	COMANDO:
+		mongo
+
+	EXPLICACION:
+		Este comando en la terminal te permitira escribir los comandos de mongo
+	
