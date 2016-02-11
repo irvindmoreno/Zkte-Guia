@@ -1,4 +1,4 @@
-<!-- 
+<!-- (no me salio)
 Aplicación que me mostrara como usar rutas
 
 PASO 1: Agregar el ['ngRoute']
@@ -50,7 +50,7 @@ PASO 3: SRIPT
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	<script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+	<script src="https://code.angularjs.org/1.2.21/angular-route.min.js"></script>
 	
 	<script type="text/javascript">
 		var miAplicacion = angular.module('tiendaDeFruta',['ngRoute']);
@@ -59,14 +59,14 @@ PASO 3: SRIPT
                             {
                                 $routeProvider.
                                     when('/url/ejem1',{
-                                        templateUrl:'extras/ejem1.html'
+                                        templateUrl:'extras/ejem1.html',
                                     }).
                                     when('/url/ejem2',{
-                                        templateUrl:'extras/ejem2.html'
+                                        templateUrl:'extras/ejem2.html',
                                     }).
                                     otherwhise({
                                         redirectTo:'/',
-                                        templateUrl:'extras/inicio.html'
+                                        templateUrl:'extras/inicio.html',
                                     });
                             }]);
 	</script>

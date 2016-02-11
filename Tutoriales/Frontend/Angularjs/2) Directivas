@@ -31,4 +31,4 @@ NG-CLASS
 NG-SRC
 ------
 		DIRECTIVA
-				<img ng-src="variableQueSeCambiaEnElControlador">
+				<img ng-src="{{variableQueSeCambiaEnElControlador}}">
