@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div ng-controller="controlador1">
+		
+		<div>Recorriendo un arrelgo</div>
+		<ul>
+			<li ng-repeat="trabajador in trabajadores">
+				{{ trabajador }}
+			</li>
+		</ul>
+		<div>Recorriendo objetos</div>
+		<ul>
+			<li ng-repeat="trabajador in trabajadoresObjeto">
+				{{ trabajador.nombre }} {{ trabajador.apellido }}
+			</li>
+		</ul>
+		
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+		miAplicacion.controller('controlador1',['$scope',function($scope){  // controlador1 del ng-controller
+			$scope.trabajadores=["Daniel","Cesar","Samuel","Jhon","Martín"];
+			$scope.trabajadoresObjeto=[
+					{ nombre:"Daniel", apellido:"Moreno"},
+					{ nombre:"Samuel", apellido:"Marquéz"},
+					{ nombre:"Cesar", apellido:"Velázques"},
+					{ nombre:"Martín", apellido:"Cruz"},
+					{ nombre:"Jhon", apellido:"Campos"}
+			];
+			
+		}])
+	</script>
+</body>
+</html>
