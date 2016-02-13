@@ -1,0 +1,51 @@
+<!-- 
+    EXPLICACIÓN
+    -----------
+        En este código aprenderemos a crear nuestras propias directivas
+
+    PASO1 : Creación de la Directiva con Angular
+    --------------------------------------------
+        Código:
+            var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+            miAplicacion.directive('miDirectiva',function()
+            {
+                return{
+                    template: '<div>Hola mundo</div>'
+                }
+            })
+        Explicación:
+            miDirectiva => sera el nombre de la directiva el cual pondremos en el html asi: mi-directiva.
+                            Este nombre debe ser obligatoriamente en formato camelcase
+
+    PASO 2: Escribiendo la etiqueta con la directiva creada
+    -------------------------------------------------------
+        Código:
+            <div mi-directiva></div>
+r-->
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	
+	<div>Creación de mi directiva</div>
+	<input type="text" ng-model="miModelo"/>
+    <div mi-directiva></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+	
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+            miAplicacion.directive('miDirectiva',function()
+            {
+                return{
+                    template: '<div>Hola mundo {{ miModelo }}</div>'
+                }
+            })
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- 
+    !IMPORTANTE: (NO ME SALIO, NI SIQUIERA ESTA COMPLETO, NO LO VEAS)PARA ESTE PROYECTO SE PROBO CON XAMPP en la carpeta/htdocs/angular
+
+    PASO 1: Ingresar a tu cuenta de firebase(create una sino tienes)
+    ---------------------------------------------------------------
+        Pasos:
+            1) Entra con tus datos a https://www.firebase.com/ o create una cuenta si no tienes
+                yo entre con google            
+        Explicación:
+            Firebase es una base de datos en la nube, que te permite guardar tus datos en tiempo real
+
+    PASO 2: Instalar el plugin de firebase y angularfire con bowe
+    ------------------------------------------------------------
+        Requisitos:
+            tener instalado bower
+        Pasos:
+            1) En la terminal ubicate dentro del proyecto y escribir lo siguiente:
+                bower install firebase angularfire
+
+    PASO3: Referenciar los script necesarios
+    ----------------------------------------
+        <script src="bower_components/angularfire/index.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+    
+    PASO 4: Colocar las dependencias en la aplicacion
+    -------------------------------------------------
+        var miAplicacion = angular.module('tiendaDeFruta',['firebase']);
+-->
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div>Consumo de json local</div>
+	<div ng-controller="miControlador">
+      
+    </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    
+    <script src="bower_components/firebase/firebase.js"></script>
+	<script src="bower_components/angularfire/index.js"></script>
+	
+	<script type="text/javascript">
+		 var miAplicacion = angular.module('tiendaDeFruta',['firebase']);        
+            miAplicacion.controller('miControlador',['$scope','$http',function($scope,$http,$firebaseArray){ 
+                     
+		      }])    
+		
+	</script>
+</body>
+</html>
