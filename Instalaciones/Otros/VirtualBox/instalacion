@@ -2,7 +2,7 @@ OPCION 1:(Recomendado)
 --------
     echo "deb http://download.virtualbox.org/virtualbox/debian trusty contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
     sudo apt-get update
-     sudo apt-get install virtualbox-5.0
+    sudo apt-get install virtualbox-5.0
 
 
 
