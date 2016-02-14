@@ -1,0 +1,21 @@
+COMANDOS 											=> 		EXPLICACIÓN
+--------		   											-----------
+show collections									=>		Te muestra las colleciones que existen
+db.nombreCollecion.insert({nombre:"nombre"}) 		=> 		inserta datos en la colección que pongas, para ello
+															"db" sera la bd a la que tu le diste "use" y la collecion si no existe la crea en ese momento 
+db.nombreDeLaCollection.find()						=>		Te muestra los datos que hay en esa collección
+db.nombreDeLaCollection.remove({campo: 28})			=>		Elimina los documentos(reguistros) que tengan como 																atributo campo=28
+db.nombreDeLaCollection.update(
+	{nombre:"Daniel"}, {nombre:"Irvin"})			=>		Modifica los documentos(registros) en donde tengan el
+															cambo nombre = "Daniel" y los remplaza por "Irvin"
+db.nombreDeLaCollection.update(
+	{nombre:"Daniel"},{$set : {apellidos:"Moreno"}})=>		Al docmuneto(registro) que tenga el campo nombre=Daniel
+															le agrega otro campo apellidos="Moreno"
+
+db.nombreDeLaCollection.update(						
+	{}, {$inc : {Edad: 1}},false,true)				=>		Incrementa a todos los registros({} mas el false y tru)
+															su campo edad en
+															"1" , si hubiese querido que aumente a uno en especifico lo hubiese echo dentro de las llaves vacias({}) por ejemplo: {nombre:"Daniel"} y sin el "false y "true", y si en ves de aumentar hubiese querido disminuir le hubiese puesto un signo negativo "-1"
+															EL false nos dice que no solo cambiara al primer registro, y el true, nos dice que lo hara para todos, si no ponemos este false y true, solo modificara al primero.
+															Si quieres modificar a uno en especifico no hace falta el true y el false, solo poner dentro de las llaves vacias que json quieres modificar									
+

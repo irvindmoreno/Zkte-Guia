@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div ng-controller="controlador1">
+		<h1>Promoción de Mangos</h1>
+		<h2>$2.15 cada uno</h2>
+		<label> Cantidad de mangos:</label>
+		<input type="text" ng-model="cantidad"/>
+		<!--
+			este input se llenara automaticamente con el valor que haya en
+			el controlador1(script) osea $scope.cantidad=1; (por tener ng-model=cantidad)
+			esto se debe a la caracteristica de angular llamada data binding
+		-->
+		<br>
+		Precio Total: {{ cantidad  * precio }}
+		<!-- 
+			cantidad y precio son datos que estan en el controlador1(script) osea:
+			$scope.cantidad=1;
+			$scope.precio=2.15
+		-->
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+		miAplicacion.controller('controlador1',['$scope',function($scope){  // controlador1 del ng-controller
+			$scope.cantidad=1;
+			$scope.precio=2.15;
+		}])
+	</script>
+</body>
+</html>

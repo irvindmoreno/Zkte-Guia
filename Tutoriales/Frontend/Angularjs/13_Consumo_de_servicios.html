@@ -1,0 +1,97 @@
+<!-- 
+    !IMPORTANTE: PARA ESTE PROYECTO SE PROBO CON XAMPP
+
+    EXPLICACIÓN
+    -----------
+        En este código aprenderemos consumir json localmente, osea json que nosotros mismos tenemos en el proyecto
+        en este caso dentro de la carpeta Angularjs/extras
+
+    PASO1 : Agregar la variable $http al controlador
+    ------------------------------------------------
+        Código:
+            var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+            miAplicacion.controller('miControlador',function($scope,$http){
+                
+            })
+        Explicación:
+            $http es el qu e me permitira hacer las peticiones
+
+    PASO 2: Creación de una etiqueta con el controlador
+    ---------------------------------------------------
+        Código:
+            <div ng-controler="miControlador"></div>
+
+    PASO 3: Consumir el json con angular
+    ------------------------------------
+        Código:(dentro del controlador)
+            $http.get('extras/datos.json')
+            .then(function(res){
+                $scope.listaDatos=res.data;
+            })
+        Explicación:
+        -----------
+            $http.get('extras/datos.json') => definimos que archivo consumiremos
+            .then(function(res).... =>  los datos traidos los almacena en la variable
+                                        res y aqui puedes hacer lo que quieras con esos datos
+
+    PASO 4: Mostrar los datos en el html(dentro del controlador definido en el paso 2)
+    ----------------------------------------------------------------------------------
+        Código:
+            <div ng-controller="miControlador">
+                <div ng-repeat="datos in listaDatos">{{ datos.nombre}}</div>
+            </div>
+
+    PASO 5: Levantar este código con un servidor:
+    ---------------------------------------------
+        En la terminal:
+            No funciona con:
+                php -S localhost:8000 13_Consumo_de_servicios_local.html
+            asi que obligado tienes que usar el xampp o viertual host(yo lo probe con el xampp)
+
+    PASO 6: CONSUMO GLOBAL
+    ----------------------
+        1) Agregar la variable:
+            $url="http://www.quieroparkear.pe/busquedas/cercanos?latitud=-12.099182256237974&longitud=-77.03061710664065"
+        2) Escribir el método get con la variable url:
+            $http.get($url)
+                          .then(function(res){                                
+                                console.log(res.data);
+                            })
+        
+-->
+<!DOCTYPE html>
+<html ng-app="tiendaDeFruta">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div>Consumo de json local</div>
+	<div ng-controller="miControlador">
+        <div>Consumo local de json</div>
+        <div ng-repeat="datos in listaDatos ">{{ datos.nombre}}</div>
+        <div>Consumo de un api de la web</div>
+    </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+	
+	<script type="text/javascript">
+		var miAplicacion = angular.module('tiendaDeFruta',[]);// tiendaDeFruta del ng-app
+            miAplicacion.controller('miControlador',['$scope','$http',function($scope,$http){  // controlador1 del ng-controller
+			        $http.get('extras/datos.json')
+                          .then(function(res){
+                                $scope.listaDatos=res.data;
+                                console.log(res.data);
+                            })
+                     
+                     $url="http://www.quieroparkear.pe/busquedas/cercanos?latitud=-12.099182256237974&longitud=-77.03061710664065"
+                     $http.get($url)
+                          .then(function(res){                                
+                                console.log(res.data);
+                            })
+		      }])    
+		
+	</script>
+</body>
+</html>

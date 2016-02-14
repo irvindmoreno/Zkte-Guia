@@ -1,0 +1,25 @@
+CREAR UNA APLICACIÓN
+--------------------
+	COMANDO:
+		ionic start nombreAplicacion plantilla
+	EXPLICACIÓN:
+		1)	plantilla => sera una palabra que te brinda ionic. Estas pueden ser: 
+					 	 *) tabs => Plantilla basada en tabs
+					 	 *) blank => Plantilla en blanco
+					 	 *) sidemenu => Navegación en la izquierda con un icono
+					 	 *) También puede ser una plantilla de internet, para ello seguiremos los siguientes pasos:
+					 	 		- En http://codepen.io/ en la la lupa busca la palabra "ionic"
+					 	 		- Selecciona esa plantilla y veras el código de la plantilla
+					 	 		- Copa la url de esa página
+					 	 		- En el comando inicial "ionic start nombreAplicacion plantilla" en ves de plantilla 
+					 	 		  escribe la url que copiaste
+		2)	le das a "n" cuando te haga una pregunta
+
+
+
+BAJAR PLANTILLA DE INTERNET:
+---------------------------
+	1) En http://codepen.io/ en la la lupa busca la palabra "ionic"
+	2) Selecciona esa plantilla y veras el código de la plantilla
+	3) Copa la url de esa página
+	4) ionic start nombreDeLaAplicacion url

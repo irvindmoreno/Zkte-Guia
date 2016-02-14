@@ -1,0 +1,8 @@
+TÉRMINOS
+--------
+	 sql:        NoSql
+	-----        -----
+	Tabla    = Collección
+	Fila     = Documento
+	Registro = Documento
+	Columna  = Campor

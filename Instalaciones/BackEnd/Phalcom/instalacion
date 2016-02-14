@@ -1,0 +1,57 @@
+sudo apt-get install git-core gcc autoconf
+sudo apt-get install php5-dev php5-mysql
+sudo apt-get install libpcre3-dev
+git clone git://github.com/phalcon/cphalcon.git
+cd cphalcon/build
+
+git checkout 1.3.3 //si se quiere instalar una version en especifico
+sudo ./install
+
+Agrega la extensión al php.ini
+  sudo kate /etc/php5/apache2/php.ini
+    colocar:
+      extension=phalcon.so
+sudo a2enmod rewrite
+sudo service apache2 restart
+
+Si vemos el phpinfo.php y no se muestra phalcon hacer:
+  cd /etc/php5/apache2/conf.d/
+  sudo touch 20-phalcon.ini
+  sudo nano 20-phalcon.ini
+  colocar:
+      extension=phalcon.so
+      
+  cd /etc/php5/cli/conf.d/
+  sudo nano 20-phalcon.ini
+  colocar:
+      extension=phalcon.so
+      
+  Crear host virtual: local.pinicio.com.conf en /etc/apache2/sites-enabled y colocar lo siguiente:
+    <VirtualHost *:80>
+      ServerAdmin admin@example.host
+      DocumentRoot "/var/www/html/pinicio/public"
+      DirectoryIndex index.php
+      ServerName local.pinicio.com
+      <Directory "/var/www/html/pinicio/public">
+	  Options All
+	  AllowOverride All
+	  Allow from all
+      </Directory>
+    </VirtualHost>
+  
+  sudo service apache2 restart
+------------------------------------------------------------------
+Instalar Phalcon Devtools
+  /home/cesar
+  git clone https://github.com/phalcon/phalcon-devtools.git
+  sudo ln -s /home/cesar/phalcon-devtools/phalcon.php /usr/bin/phalcon
+  sudo chmod ugo+x /usr/bin/phalcon
+  sudo service apache2 restart
+  
+  phalcon commands		//muestra secuencia de comandos usados en phalcon
+  
+  sudo phalcon create-project pinicio
+  sudo chown -R cesar:cesar pinicio
+  sudo chmod 775 -R pinicio/
+  
+http://localhost/pinicio/public/index.php

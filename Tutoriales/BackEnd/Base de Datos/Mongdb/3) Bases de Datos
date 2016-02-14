@@ -1,0 +1,6 @@
+COMANDOS 			=> 		EXPLICACIÓN
+--------		   			-----------
+show dbs 			=> 		Te lista las bases de datos que tienes 
+use nombreBd		=>		(Crea/selecciona)Te ubica en la bd que que selecciones, si no existe la bd, la crea
+db.dropDatabase()	=>		Elimina la base de datos en la que te encuentras acutalmente, es decir en la que le
+							diste a "use nombreDeBd"
