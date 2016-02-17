@@ -1,3 +1,29 @@
+REQUISITOS:
+----------
+  PHP >= 5.3
+
+PASO 1:
+------
+    sudo apt-get install php5-dev libpcre3-dev gcc make php5-mysql
+    git clone --depth=1 git://github.com/phalcon/cphalcon.git
+    cd cphalcon/build
+    sudo ./install
+
+    cd /etc/php5/apache2/conf.d/
+    sudo kate 30-phalcon.ini 
+    //Aqui agregalr la siguiente linea:
+    extension=phalcon.so
+  
+
+
+
+
+
+
+
+///***No me funciono****///
+
+
 sudo apt-get install git-core gcc autoconf
 sudo apt-get install php5-dev php5-mysql
 sudo apt-get install libpcre3-dev

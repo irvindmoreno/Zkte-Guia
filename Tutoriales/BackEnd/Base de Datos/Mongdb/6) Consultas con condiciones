@@ -1,0 +1,13 @@
+CONTAR REGISTROS MAYOR A ALGO(CONDICIONAL)
+-----------------------------------------
+    COMANDO:
+        db.nombreDeLaColleccion.count({Edad:{ $gte : 65 }})
+    Explicacion:
+        Contara los registros donde la edad sea mayor o igual a 65 { $gte : 65 } ,el $gte hace referencia al mayor o igual
+        
+DEVOLVER REGIISTROS DONDE EXISTA UN DETERMINADO CAMPO
+-----------------------------------------------------
+    COMANDO:
+        db.nombreDeLaColleccion.find({comentario: {exists: true} })
+    EXPLICACION:
+        Devuelve los registros en donde exista el campo cometario

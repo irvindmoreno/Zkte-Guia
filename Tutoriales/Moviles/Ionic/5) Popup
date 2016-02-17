@@ -1,0 +1,15 @@
+PASO1: DEFINIR EL $ionocPopup EN EL CONTROLADOR
+-----------------------------------------------
+    angular.module('starter.controllers',[])
+            .controller('MapCtrl',function($scope,$ionicPopup){
+
+            })
+        
+PASO 2: CÓDIGO PARA LEVANTAR LA VENTANA MODAL
+--------------------------------------------
+    angular.module('starter.controllers',[])
+        .controller('MapCtrl',function($scope,$ionicPopup){
+            $ionicPopup.alert({
+                template: '<div>Hola mundo</div>'
+            })
+        })

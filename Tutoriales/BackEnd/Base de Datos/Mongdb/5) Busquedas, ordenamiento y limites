@@ -1,0 +1,34 @@
+POR FILTRO CON _ID:
+-------------------
+    COMANDO:
+        db.nombreDeLaColleccion.find(null,{nombre:1})
+    EXPLICACIÓN:
+        Te muestra solo los nombres y el _id de forma ascendentes
+        El null es para anular la busqueda globar del find
+        
+POR FILTRO SIN _ID:
+-------------------
+    COMANDO:
+        db.nombreDeLaColleccion.find(null,{nombre:1,_id:0})
+    EXPLICACIÓN:
+        Te muestra solo el nombre sin el _id de forma ascendentes
+        El null es para anular la busqueda globar del find
+        
+BUSQUEDA ORDENADA
+------------------
+    COMANDO:
+        db.nombreDeLaColleccion.find(null,{edad:1,_id:0}).sort({edad:1})
+    EXPLICACIÓN:
+        Muestra solo la edad ordenadas por edad de mayor a menor ".sort({edad:1})" si quieres al reves pon(-1)
+        El null es para anular la busqueda globar del find
+        _id:0 es para que no me muestre el id
+        
+BUSQUEDA ORDENADA Y CON LIMITES
+-------------------------------
+    COMANDO:
+        db.nombreDeLaColleccion.find(null,{edad:1,_id:0}).sort({edad:1}).limit(3)
+    EXPLICACIÓN:
+        Muestra solo la edad ordenadas por edad de mayor a menor ".sort({edad:1})" si quieres al reves pon(-1)
+        El null es para anular la busqueda globar del find
+        _id:0 es para que no me muestre el id
+        limit: para solo devolver 3 registros

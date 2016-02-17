@@ -1,0 +1,18 @@
+EXPLICACIÓN:
+-----------
+    Para trabajar con google maps, es importante generar esta llave
+PASO 1:
+------
+    -   Entrar al siguiente link: https://developers.google.com/maps/
+    -   Dar click en la opción web
+    -   Dar click a "Obtener una clave" o "Get a Key" si esta en ingles
+    -   Después del paso anterior se abrira una ventana modal, en esta da click en "Coninuar"
+    -   Después del paso anterior se abrira una nueva pestaña, en ella veras radio button que te dice si aceptas las
+        condiciones, dale que si y luego click en el boton "Aceptar y continuar" , esto te creara un proyecto que se
+        llamara My Project
+    -   Despues del paso anterior despues de un ratito se recargara la página con otra vista.
+        En esta vista en la opcion de credenciales hay un casillero que dice "Nombre" ahi coloca el nombre de tu llave
+        y luego le das al boton crear.
+    -   Después del paso anterior se levantara un modal con la llave, copia ese código poque luego lo usaremos.
+        En mi caso esta es la llave:
+        AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc

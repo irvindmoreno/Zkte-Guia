@@ -1,0 +1,70 @@
+PASO 1: COPIAR EL SCRIP DE GOOGLE MAPS
+--------------------------------------
+    -   En tu proyecto escribe el siguiente script:
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc"></script>
+        Donde AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc es la llave que generamos en el paso 1)
+        
+PASO 2: CREAR LOS CONTROLADORES
+-------------------------------
+    -   Recuerda que usaremos angular, asi que si no tienes angular tienes que ponerlo :3
+    -   Ir al sitio: http://www.gps-coordinates.net/
+        Este sitio lo usaremos para buscar coordenades de algun sitio.
+        Asi que en adrres busca una dirección y luego le das a Get GPS Coordinates.
+        daran una latitud y longitud que usaremos luego.
+    -   Creamos el archivo creado => controllers.js colocamos el siguiente código:
+        angular.module('starter.controllers',[])
+        .controller('MapCtrl',function($scope,$ionicLoading,$ionicPopup){
+            var zokalo = {
+                lat: -8.1090524,
+                lng: -79.0215336
+            }
+            
+            initMap = function(){
+                var mapDiv = document.getElementById('map');
+                var mapOptions = {
+                    center: zokalo,
+                    zoom: 10
+                }
+                $scope.map = new google.maps.Map(mapDiv,mapOptions)
+            }
+            if( document.readyState === "complete")
+            {
+                initMap();
+            }
+            else
+            {
+                google.maps.event.addDomListener(window,'load',initMap)
+            }
+        })
+        
+        DONDE:
+            *   starter.controllers => Es el nombre de que le ponemos a este modulo.
+            *   [] => Aqui se ponen las dependecias extras, como del momento no pondremos ninguna, queda vacio.
+            *   MapCtrl => Es el nombre que le estoy asignando a mi controlador que estoy creando
+            *   $scope => Propio de angular para unir la vista con el controlador
+            *   $ionicLoading => Método propio de ionic para mostrar el cargador, asi que si no estas usando ionic, no lo uses
+            *   $ionicPopup => También es propio de ionic para usar ventanas modales, asi que si no usas ionic, tampoco lo
+                                pongas
+            *   lat: -8.1090524,
+                lng: -79.0215336  => son los datos obtenidos del guion anterior de la página http://www.gps-coordinates.net/
+                                
+PASO 3: SI ESTAS EN IONIC => IMPORTAR EL starter.controllers EN EL app.js
+--------------------------------------------------------------------------
+    angular.module('starter', ['ionic', 'starter.controllers'])
+
+PASO 3: COLOCAR EL HTML NECESARIO:
+---------------------------------
+    <div ng-controller="MapCtrl">
+  		 <div id="map"></div>
+  	</div>
+    
+PASO 4: COLOCAR LOS ESTILOS NECESARIOS:
+--------------------------------------
+    #map{
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    .scroll{
+        height:100%;
+    }

@@ -16,10 +16,20 @@ Pasos para su implementación
     donde:
     nombreDelNampespace =  nombre Del Nampespace que usaras
     nombreDeLaCarpeta = nomvre de la carpeta en donde estaran tus clases con dicho namespace
-2) escribir en la consola
+2) No olvidar escribir el namespace nombreDelNampespace en cada archivo que asociemos a este namespace
+    ejemplo:
+    <?php
+        namespace nombreDelNampespace;
+        class Ejemplo
+        {
+
+        }
+3) escribir en la consola
     composer install
     Esto aparte de descargar los paquetes del composer.json te creara un archivo autolad.php
     dentro de la carpeta vendor, y este archivo es el q nos interesa
-3) si no estasusando un framework es necesario que requieras al autolad en el archivo en donde
+4) si no estasusando un framework es necesario que requieras al autolad en el archivo en donde
     instanciaras a tus objetoscon la siguiente linea:
     require_once 'vendor/autoload.php'
+5) Ahora para hacer uso de esto solo hay que instanciar al obejto sin necesidad de ningun require
+    $obj=new \nombreDelNampespace\nombreDeLaClase();
