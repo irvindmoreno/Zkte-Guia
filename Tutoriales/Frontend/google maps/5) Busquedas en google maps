@@ -1,0 +1,29 @@
+PASO 1: INSERTAR EL SRCIPT NECESARIO
+------------------------------------
+    En donde definimos el script para llamar a google maps es decir este:
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc"></script>
+    vamos a agregar esto al final: libraries=places
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc&libraries=places"></script>
+PASO 2: AGREGAR EL BUSCADOR DE GOOGLE
+-------------------------------------
+    <input id="search" class="controls" type="text" placeholder="">
+
+PASO 3: AGREGAR LA FUNCIONALIDAD DEL BUSCADOR
+---------------------------------------------
+    searchPlace = function()
+    {
+        var search = document.getElementById('search');
+        var searchBox = new google.maps.places.SearchBox(search);
+        $scope.map.controls[google.maps.ControlPosition.TOP_LEFT].push(search);
+        
+        searchBox.addListener('places_changed',function(){
+            var places = searchBox.getPlaces();
+            places.forEach(function(place){
+                var ubicacion = place.geometry.location;
+                addMarker(ubicacion);
+                $scope.map.setCenter(ubicacion)
+            })
+        })
+    }
+    
+    ahora dentro de la función initMap la invocas

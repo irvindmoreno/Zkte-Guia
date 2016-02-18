@@ -2,7 +2,8 @@ PASO 1: COPIAR EL SCRIP DE GOOGLE MAPS
 --------------------------------------
     -   En tu proyecto escribe el siguiente script:
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc"></script>
-        Donde AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc es la llave que generamos en el paso 1)
+        Donde:
+            AIzaSyAy36mz5bOxR5EQ4MQ75NE-Ff82mtQF1Tc es la llave que generamos en el paso 1)
         
 PASO 2: CREAR LOS CONTROLADORES
 -------------------------------

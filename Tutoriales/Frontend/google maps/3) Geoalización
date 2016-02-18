@@ -1,0 +1,39 @@
+PASO 1: AGREGAR EL BOTON QUE TE LLEVARA A TU POSICIÓN POR GPS(EN IONIC)
+----------------------------------------------------------------------
+    CÓDIGO:
+        <ion-footer-bar>
+            <a ng-click="locateMe()" class="button button-icon icon ion-ios-navigate-outline"></a>
+        </ion-footer-bar>
+        
+PASO 2: OBTENER TU POSICIÓN POR GPS
+-----------------------------------
+    En controller.js agregar el siguiente código
+    CÓDIGO
+        var miUbicacion = {};
+            $scope.locateMe = function()
+            {
+                $ionicLoading.show({});
+                navigator.geolocation.getCurrentPosition(function(pos){
+
+                      miUbicacion.lat = pos.coords.latitude;
+                      miUbicacion.lng = pos.coords.longitude;
+                      $scope.map.setCenter(miUbicacion);
+                      $ionicLoading.hide();
+
+                },function(error){
+
+                      $ionicLoading.hide();
+                      $ionicPopup.alert({
+                          title: 'Error de Localización',
+                          template: error.message,
+                          okType: 'button-assertive'
+                    });
+                })
+            }
+    EXPLICACIÓN:    
+        -   $ionicLoading.show({}); => Hazta aqui solo hemos echo que al dar click al boton aparezca una cargador de ionic
+        -   navigator.geolocation.getCurrentPosition => Tiene 2 funciones como paremtros, la primera es cuando todo esta ok
+                                                        y la segunda es que si hubo un error
+        -   pos.coords.latitude => me devuelve la posicion en la que actualmente me encuentro(gps)
+        -    $scope.map.setCenter(miUbicacion); => me lleva la vista de google maps directamene a la ubicacion que le
+                                                    acabo de mandar como paramtro

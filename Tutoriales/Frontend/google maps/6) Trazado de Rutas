@@ -1,0 +1,19 @@
+PASO 1: DEFINIR LA FUNCION TRACEROUTE:
+-------------------------------------
+    traceRoute = function(){
+        var directionDisplay = new google.maps.DirectionsReder({
+            map: $scope.map
+        });
+        
+        var request ={
+            destination: zokalo,
+            origin: miUbicacion,
+            travelMode: google.maps.TravelMode.WALKING
+        }
+        var directionsService.route(request,function(response,status){
+            if( status == google.maps.DirectionsStatus.OK)
+            {
+                directionsDisplay.setDirections(response)
+            }
+        })
+    }

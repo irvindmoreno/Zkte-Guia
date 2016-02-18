@@ -1,0 +1,28 @@
+PASO 1: AGREGAR FUNCION ADMARKER
+--------------------------------
+    CÓDIGO:
+        addMarker = function()
+        {
+            var marker = new google.maps.Marker({
+                map: $scope.map,
+                position: miUbicacion
+            })
+        }
+    DONDE:
+        $scope.map => Se había instanciado antes asi: $scope.map = new google.maps.Map(mapDiv,mapOptions)
+                        dentro de la función initMap, en los pasos anteries
+        miUbicacion => Ya se lo habia instanciado en los pasos anteriores
+
+PASO 2: INVOCAR LA FUNCIÓN addMarker
+-----------------------------------
+    Dentro de la función locateMe vemos este trozo de código
+        navigator.geolocation.getCurrentPosition(function(pos){
+
+                          miUbicacion.lat = pos.coords.latitude;
+                          miUbicacion.lng = pos.coords.longitude;
+                          $scope.map.setCenter(miUbicacion);
+                          $ionicLoading.hide();
+                          addMarker();
+
+                    }
+    Cómo vemos ahi hemos agregado el addMarker()
