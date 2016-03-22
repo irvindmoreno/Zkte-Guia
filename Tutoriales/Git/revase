@@ -1,0 +1,5 @@
+#saca una rama hija
+    git checkout -b nombreRamaHIja
+    git pull // de dara un codigo, y modificala y le defines su padre
+
+git rebase -i origin/ramaPadre

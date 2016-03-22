@@ -1,0 +1,11 @@
+PREREQUISITOS
+-------------
+    Tener instalado VirtualBox
+    Instalar Vagrant (siguiente sguiente es facil)
+
+PASO : INSTALAR PUPHPPET
+------------------------
+    1)  Ir al siguiente link:
+            https://puphpet.com/
+        Ir a la opcion deploy target
+        Seleccionaar locally
