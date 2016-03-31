@@ -1,0 +1,8 @@
+Requisitos:
+    Tener instalado meld
+Concepto:
+    Lo que hara es mostrarte las diferencias entre un archivo y otro para que puedas solucionar conflictos
+Comando:
+    git difftool rama1 rama2 nombreDelArchivo
+Ejemplo en epass:
+    git difftool master sprint_1 module/Application/src/Application/Controller/PasarelaController.php
