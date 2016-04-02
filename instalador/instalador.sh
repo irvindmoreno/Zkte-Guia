@@ -102,6 +102,7 @@ crearLLavesParaGir()
 	cd .ssh
 	ls
 	sudo cat id_rsa.pub
+	echo "deberias subir tus llaves a github y bitbucket"
 }
 inicio
 git
