@@ -94,6 +94,15 @@ echo "$cadena" >> ~/.zshrc
 	./install.sh
 
 }
+crearLLavesParaGir()
+{
+	ssh-keygen
+	cd ~/
+	ls -la
+	cd .ssh
+	ls
+	sudo cat id_rsa.pub
+}
 inicio
 git
 ohMyZsh
@@ -103,3 +112,4 @@ lamp
 composer
 virtualBox
 configurarMiMaquina
+crearLLavesParaGir
