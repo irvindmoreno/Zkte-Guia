@@ -3,7 +3,7 @@ inicio()
 	sudo apt-get update
 	sudo apt-get upgrade
 }
-git()
+gitInstall()
 {
 	echo "instalaremos git"
 	#instalaremos git
@@ -70,6 +70,7 @@ virtualBox()
 }
 configurarMiMaquina()
 {	
+	cd $HOME	
 	rutazkte="$(pwd)"
 cadena='
 #INICIO Del Zkte-guia
@@ -87,10 +88,15 @@ cadena='
 	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"		
 #FIN Del Zkte-guia'
 echo "$cadena" >> ~/.zshrc
+
+	sudo mkdir Carrera
+	cd Carrera
 	sudo mkdir FrontEnd
 	cd FrontEnd
 	git clone git@github.com:irvindmoreno/zkte-front.git
 	cd zkte-front
+	git fetch origin jquery:jquery
+	git checkout jquery	
 	./install.sh
 
 }
@@ -104,8 +110,12 @@ crearLLavesParaGir()
 	sudo cat id_rsa.pub
 	echo "deberias subir tus llaves a github y bitbucket"
 }
+wine()
+{
+	sudo apt-get install wine
+}
 inicio
-git
+gitInstall
 ohMyZsh
 sublime3
 meld
@@ -114,3 +124,4 @@ composer
 virtualBox
 configurarMiMaquina
 crearLLavesParaGir
+wine
