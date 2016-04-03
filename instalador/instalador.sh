@@ -2,6 +2,7 @@ inicio()
 {
 	sudo apt-get update
 	sudo apt-get upgrade
+	sudo apt-get install nautilus
 }
 gitInstall()
 {
@@ -91,7 +92,9 @@ cadena='
 	alias gf="git fetch"
 	alias subl.zkte.guia="subl '$rutazkte'/Carrera/Zkte-Guia/"
 	alias subl.zsrh="subl '$rutazkte'/.zshrc"
-	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"		
+	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"
+	alias op.carrera="nautilus '$rutazkte'/Carrera"
+	alias op.front="nautilus '$rutazkte'/Proyectos"
 #FIN Del Zkte-guia'
 echo "$cadena" >> ~/.zshrc
 
