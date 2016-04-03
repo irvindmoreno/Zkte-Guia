@@ -69,7 +69,7 @@ virtualBox()
     sudo apt-get install virtualbox-5.0
 }
 configurarMiMaquina()
-{	
+{
 	cd $HOME	
 	rutazkte="$(pwd)"
 cadena='
@@ -89,8 +89,8 @@ cadena='
 #FIN Del Zkte-guia'
 echo "$cadena" >> ~/.zshrc
 
-	sudo mkdir Carrera
-	cd Carrera
+	
+	
 	sudo mkdir FrontEnd
 	cd FrontEnd
 	git clone git@github.com:irvindmoreno/zkte-front.git
@@ -114,8 +114,20 @@ wine()
 {
 	sudo apt-get install wine
 }
+zkteguia()
+{
+	cd $HOME
+	sudo mkdir Carrera
+	cd Carrera
+	git@github.com:irvindmoreno/Zkte-Guia.git
+	cd Zkte-Guia
+	chmod 775 -R instalador
+	cd instalador
+	./instalador.sh	
+}
 inicio
 gitInstall
+zkteguia
 ohMyZsh
 sublime3
 meld
