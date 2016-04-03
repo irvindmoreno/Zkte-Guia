@@ -41,20 +41,22 @@ lamp()
 		sudo mysql_install_db
 		sudo mysql_secure_installation
 	echo "instalaremos php"
-		sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt		
+		sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt				
+		sudo subl /etc/apache2/mods-enabled/dir.conf
 		echo "!IMPORTANTE:Debemos remplazar la siguiente linea:
 			DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
 			por:
 			DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm"
-		sudo subl /etc/apache2/mods-enabled/dir.conf
-		sudo service apache2 restart		
+		sleep 3m
+		sudo service apache2 restart
+		sudo subl /var/www/html/info.php
 		echo "!IMPORTANTE: Dentro pegar:
 		dentro pegar:
 		<?php
 			phpinfo();
 		?>
 		luego guarda con ctr+o, enter, ctr x"
-		sudo subl /var/www/html/info.php
+		sleep 3m
 	echo "instalaremos phpmyadmin"
 		sudo apt-get install phpmyadmin -y
 		sudo ln -s /usr/share/phpmyadmin/ /var/www/html/
@@ -63,7 +65,7 @@ composer()
 {
 	sudo apt-get install curl
 	sudo apt-get install php5-cli
-	curl -sS https://getcomposer.org/installer | php
+	sudo curl -sS https://getcomposer.org/installer | php
 	sudo mv composer.phar /usr/local/bin/composer
 }
 virtualBox()
@@ -94,10 +96,10 @@ cadena='
 echo "$cadena" >> ~/.zshrc
 
 	
-	
-	sudo mkdir FrontEnd
+	cd Carrera
+	mkdir FrontEnd
 	cd FrontEnd
-	sudo git clone git@github.com:irvindmoreno/zkte-front.git
+	git clone https://github.com/irvindmoreno/zkte-front.git
 	cd zkte-front
 	git fetch origin jquery:jquery
 	git checkout jquery	
@@ -113,7 +115,7 @@ crearLLavesParaGir()
 	ls
 	sudo cat id_rsa.pub
 	echo "deberias subir tus llaves a github y bitbucket"
-	sleep 5m
+	sleep 3m
 }
 wine()
 {
@@ -122,14 +124,15 @@ wine()
 zkteguia()
 {
 	cd $HOME
-	sudo mkdir Carrera
-	sudo chmod 775 -R Carrera
+	mkdir Carrera	
 	cd Carrera
-	sudo git clone git@github.com:irvindmoreno/Zkte-Guia.git
-	cd Zkte-Guia
-	chmod 775 -R instalador
-	cd instalador
-	./instalador.sh	
+	eval "$(ssh-agent -s)"
+	ssh-add
+	git clone https://github.com/irvindmoreno/Zkte-Guia.git
+	#cd Zkte-Guia
+	#chmod 775 -R instalador
+	#cd instalador
+	#./instalador.sh	
 }
 
 inicio
@@ -140,7 +143,7 @@ ohMyZsh
 sublime3
 meld
 lamp
-composer
 virtualBox
 configurarMiMaquina
 wine
+#composer
