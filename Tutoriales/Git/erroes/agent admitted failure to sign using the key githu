@@ -1,0 +1,4 @@
+agent admitted failure to sign using the key github
+Cmandos:
+	eval "$(ssh-agent -s)"
+	ssh-add
