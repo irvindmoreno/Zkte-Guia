@@ -101,7 +101,7 @@ echo "$cadena" >> ~/.zshrc
 	cd FrontEnd
 	eval "$(ssh-agent -s)"
 	ssh-add
-	git clone https://github.com/irvindmoreno/zkte-front.git
+	git clone git@github.com:irvindmoreno/zkte-front.git
 	cd zkte-front
 	git fetch origin jquery:jquery
 	git checkout jquery	
@@ -130,13 +130,23 @@ zkteguia()
 	cd Carrera
 	eval "$(ssh-agent -s)"
 	ssh-add
-	git clone https://github.com/irvindmoreno/Zkte-Guia.git
+	git clone git@github.com:irvindmoreno/Zkte-Guia.git
 	#cd Zkte-Guia
 	#chmod 775 -R instalador
 	#cd instalador
 	#./instalador.sh	
 }
-
+nodejsnpm()
+{
+	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+	sudo apt-get install -y nodejs
+}
+gulp()
+{
+	sudo npm install --save gulp-install
+	sudo npm install -g gulp
+	sudo apt-get install gtk2-engines-pixbuf gnome-themes-standard libcanberra-gtk3-module:i386 libcanberra-gtk3-module
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -148,4 +158,6 @@ lamp
 virtualBox
 configurarMiMaquina
 wine
+nodejsnpm
+gulp
 #composer
