@@ -152,6 +152,12 @@ gulp()
 	sudo npm install -g gulp
 	sudo apt-get install gtk2-engines-pixbuf gnome-themes-standard libcanberra-gtk3-module:i386 libcanberra-gtk3-module
 }
+htacceserror()
+{
+	sudo a2enmod rewrite
+	sudo a2enmod ssl
+	sudo service apache2 restart
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -160,6 +166,7 @@ ohMyZsh
 sublime3
 meld
 lamp
+htacceserror
 virtualBox
 configurarMiMaquina
 wine
