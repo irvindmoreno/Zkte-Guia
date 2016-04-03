@@ -8,6 +8,10 @@ gitInstall()
 	echo "instalaremos git"
 	#instalaremos git
 	sudo apt-get install git
+	git config --global user.name "Irvin DANIEL"
+	git config --global user.email "irvind.moreno@gmail.com"
+	git config --global color.ui true
+	git config --global --list
 }
 ohMyZsh()
 {
