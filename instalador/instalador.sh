@@ -93,6 +93,7 @@ cadena='
 	alias subl.zkte.guia="subl '$rutazkte'/Carrera/Zkte-Guia/"
 	alias subl.zsrh="subl '$rutazkte'/.zshrc"
 	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"
+	alias rut.proyecto="cd '$rutazkte'/Carrera/Proyectos"
 	alias op.carrera="nautilus '$rutazkte'/Carrera"
 	alias op.front="nautilus '$rutazkte'/Proyectos"
 #FIN Del Zkte-guia'
@@ -129,7 +130,8 @@ wine()
 zkteguia()
 {
 	cd $HOME
-	mkdir Carrera	
+	mkdir Carrera
+	mkdir Proyectos
 	cd Carrera
 	eval "$(ssh-agent -s)"
 	ssh-add
