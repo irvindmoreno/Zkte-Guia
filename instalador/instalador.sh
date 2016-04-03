@@ -113,6 +113,7 @@ crearLLavesParaGir()
 	ls
 	sudo cat id_rsa.pub
 	echo "deberias subir tus llaves a github y bitbucket"
+	sleep 5m
 }
 wine()
 {
@@ -130,6 +131,7 @@ zkteguia()
 	cd instalador
 	./instalador.sh	
 }
+
 inicio
 gitInstall
 crearLLavesParaGir
