@@ -99,6 +99,8 @@ echo "$cadena" >> ~/.zshrc
 	cd Carrera
 	mkdir FrontEnd
 	cd FrontEnd
+	eval "$(ssh-agent -s)"
+	ssh-add
 	git clone https://github.com/irvindmoreno/zkte-front.git
 	cd zkte-front
 	git fetch origin jquery:jquery
