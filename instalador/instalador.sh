@@ -93,7 +93,7 @@ echo "$cadena" >> ~/.zshrc
 	
 	sudo mkdir FrontEnd
 	cd FrontEnd
-	git clone git@github.com:irvindmoreno/zkte-front.git
+	sudo git clone git@github.com:irvindmoreno/zkte-front.git
 	cd zkte-front
 	git fetch origin jquery:jquery
 	git checkout jquery	
@@ -120,7 +120,7 @@ zkteguia()
 	sudo mkdir Carrera
 	sudo chmod 775 -R Carrera
 	cd Carrera
-	git clone git@github.com:irvindmoreno/Zkte-Guia.git
+	sudo git clone git@github.com:irvindmoreno/Zkte-Guia.git
 	cd Zkte-Guia
 	chmod 775 -R instalador
 	cd instalador
@@ -128,6 +128,7 @@ zkteguia()
 }
 inicio
 gitInstall
+crearLLavesParaGir
 zkteguia
 ohMyZsh
 sublime3
@@ -136,5 +137,4 @@ lamp
 composer
 virtualBox
 configurarMiMaquina
-crearLLavesParaGir
 wine
