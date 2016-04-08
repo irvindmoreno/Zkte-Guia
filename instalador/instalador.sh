@@ -183,7 +183,7 @@ inicio
 gitInstall
 crearLLavesParaGir
 zkteguia
-ohMyZsh
+
 sublime3
 meld
 lamp
@@ -194,4 +194,5 @@ wine
 nodejsnpm
 gulp
 mongo
-#composer
+composer
+ohMyZsh
