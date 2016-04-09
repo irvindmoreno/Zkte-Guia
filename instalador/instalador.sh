@@ -179,6 +179,12 @@ mongo()
 	sudo apt-get install php5-dev php5-cli php-pear
 	sudo pecl install mongo
 }
+memcached()
+{
+	 sudo apt-get install memcached
+	 sudo apt-get install php5-memcached
+	 sudo service apache2 restart
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -195,4 +201,5 @@ nodejsnpm
 gulp
 mongo
 composer
+memcached
 ohMyZsh
