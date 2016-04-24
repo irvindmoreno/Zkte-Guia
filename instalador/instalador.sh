@@ -185,6 +185,12 @@ memcached()
 	 sudo apt-get install php5-memcached
 	 sudo service apache2 restart
 }
+sonidoHdmi()
+{
+	sudo add-apt-repository ppa:ubuntu-audio-dev/alsa-daily
+	sudo apt update
+	sudo apt-get install oem-audio-hda-daily-dkms
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -202,4 +208,5 @@ gulp
 mongo
 composer
 memcached
+sonidoHdmi
 ohMyZsh
