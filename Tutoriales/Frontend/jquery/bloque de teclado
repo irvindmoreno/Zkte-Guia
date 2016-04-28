@@ -1,4 +1,28 @@
-// solo números
-$('.soloNumeros').keyup(function (){
-    this.value = (this.value + '').replace(/[^0-9]/g, '');
-});
+//llama a esta funcion y coloca la clase en la etiqueta
+function bloqueoDeTecladoEnFormularios()
+{
+    $('.bloqueoSoloLetras').on("keyup",function(event){
+        if(event.keyCode != 37 && event.keyCode != 39) 
+        {
+            this.value = (this.value + '').replace(/[^a-zA-Z áéíóúñ]/g, '');
+        }             
+    });
+    $('.bloqueoSoloNumeros').on("keyup",function(event){
+        if(event.keyCode != 37 && event.keyCode != 39) 
+        {
+            this.value = (this.value + '').replace(/[^0-9]/g, '');
+        }
+    });
+    $('.bloqueoSoloLetrasYNumeros').on("keyup",function(event){
+        if(event.keyCode != 37 && event.keyCode != 39) 
+        {
+            this.value = (this.value + '').replace(/[^0-9a-zA-Z]/g, '');
+        }
+    });
+    $('.bloqueoTelefono').on("keyup",function(event){
+        if(event.keyCode != 37 && event.keyCode != 39) 
+        {
+            this.value = (this.value + '').replace(/[^0-9 #()-]/g, '');
+        }
+    });
+}

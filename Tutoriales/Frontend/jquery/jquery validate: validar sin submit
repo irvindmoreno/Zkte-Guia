@@ -1,0 +1,11 @@
+// Después de definir tus reglas como normalmente se hacen al boton que quieres que valide dale un onclick que llame a esta funcion
+function agregarPaquete()
+    {     
+          
+        if($(".formulario-Vehiculos").valid()){   // test for validity
+            alert("es valido");
+        } else {
+            alert("no es valido");
+        }
+       
+    }
