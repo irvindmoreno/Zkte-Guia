@@ -2,6 +2,7 @@ inicio()
 {
 	sudo apt-get update
 	sudo apt-get upgrade
+	sudo apt-get install nautilus
 }
 gitInstall()
 {
@@ -91,7 +92,10 @@ cadena='
 	alias gf="git fetch"
 	alias subl.zkte.guia="subl '$rutazkte'/Carrera/Zkte-Guia/"
 	alias subl.zsrh="subl '$rutazkte'/.zshrc"
-	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"		
+	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"
+	alias rut.proyecto="cd '$rutazkte'/Carrera/Proyectos"
+	alias op.carrera="nautilus '$rutazkte'/Carrera"
+	alias op.front="nautilus '$rutazkte'/Proyectos"
 #FIN Del Zkte-guia'
 echo "$cadena" >> ~/.zshrc
 
@@ -126,7 +130,8 @@ wine()
 zkteguia()
 {
 	cd $HOME
-	mkdir Carrera	
+	mkdir Carrera
+	mkdir Proyectos
 	cd Carrera
 	eval "$(ssh-agent -s)"
 	ssh-add
@@ -147,17 +152,66 @@ gulp()
 	sudo npm install -g gulp
 	sudo apt-get install gtk2-engines-pixbuf gnome-themes-standard libcanberra-gtk3-module:i386 libcanberra-gtk3-module
 }
+htacceserror()
+{
+	sudo a2enmod rewrite
+	sudo a2enmod ssl
+	sudo service apache2 restart
+}
+mongo()
+{
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+	echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+	sudo apt-get update
+	sudo apt-get install -y mongodb-org=3.0.6 mongodb-org-server=3.0.6 mongodb-org-shell=3.0.6 mongodb-org-mongos=3.0.6 mongodb-org-tools=3.0.6
+	echo "mongodb-org hold" | sudo dpkg --set-selections
+	echo "mongodb-org-server hold" | sudo dpkg --set-selections
+	echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+	echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+	echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+	sudo service mongod restart
+	sudo apt-get install php5-mongo
+	sudo subl /etc/php5/apache2/php.ini
+	echo "agregaesto: extension = mongo.so"
+	sleep 3m
+	sudo service apache2 restart
+	sudo pecl install mongo
+	sudo apt-get install php5-dev php5-cli php-pear
+	sudo pecl install mongo
+}
+memcached()
+{
+	 sudo apt-get install memcached
+	 sudo apt-get install php5-memcached
+	 sudo service apache2 restart
+}
+sonidoHdmi()
+{
+	sudo add-apt-repository ppa:ubuntu-audio-dev/alsa-daily
+	sudo apt update
+	sudo apt-get install oem-audio-hda-daily-dkms
+}
+gpated()
+{
+	sudo apt-get -y install gparted
+}
 inicio
 gitInstall
 crearLLavesParaGir
 zkteguia
-ohMyZsh
+
 sublime3
 meld
 lamp
+htacceserror
 virtualBox
 configurarMiMaquina
 wine
 nodejsnpm
 gulp
-#composer
+mongo
+composer
+memcached
+sonidoHdmi
+gpated
+ohMyZsh
