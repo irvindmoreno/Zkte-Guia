@@ -191,6 +191,10 @@ sonidoHdmi()
 	sudo apt update
 	sudo apt-get install oem-audio-hda-daily-dkms
 }
+gpated()
+{
+	sudo apt-get -y install gparted
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -209,4 +213,5 @@ mongo
 composer
 memcached
 sonidoHdmi
+gpated
 ohMyZsh
