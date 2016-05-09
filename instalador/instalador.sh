@@ -92,6 +92,7 @@ cadena='
 	alias gf="git fetch"
 	alias gl="git clone"
 	alias gfo="git fetch origin"
+	alias ar="sudo service apache2 restart"
 	alias subl.zkte.guia="subl '$rutazkte'/Carrera/Zkte-Guia/"
 	alias subl.zsrh="subl '$rutazkte'/.zshrc"
 	alias rut.zkte.guia="cd '$rutazkte'/Carrera/Zkte-Guia/"
