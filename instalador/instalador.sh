@@ -206,6 +206,10 @@ actualizarPhpAla6()
 	sudo apt-get upgrade
 	sudo apt-get install php5
 }
+instalarCurl()
+{
+	sudo apt-get update && apt-get install php5-curl
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -227,3 +231,4 @@ sonidoHdmi
 gpated
 ohMyZsh
 actualizarPhpAla6
+instalarCurl
