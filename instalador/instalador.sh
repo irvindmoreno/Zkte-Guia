@@ -198,6 +198,14 @@ gpated()
 {
 	sudo apt-get -y install gparted
 }
+actualizarPhpAla6()
+{
+	sudo apt-get install software-properties-common
+	sudo add-apt-repository ppa:ondrej/php5-5.6
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install php5
+}
 inicio
 gitInstall
 crearLLavesParaGir
@@ -218,3 +226,4 @@ memcached
 sonidoHdmi
 gpated
 ohMyZsh
+actualizarPhpAla6
