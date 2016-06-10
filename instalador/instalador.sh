@@ -208,7 +208,7 @@ actualizarPhpAla6()
 }
 instalarCurl()
 {
-	sudo apt-get update && apt-get install php5-curl
+	sudo apt-get install php5-curl
 }
 inicio
 gitInstall
